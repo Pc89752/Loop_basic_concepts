@@ -1,0 +1,84 @@
+body {
+  background: wheat;
+}
+
+ul.navbar > li {
+    display: inline-block;
+    margin: 0 5%;
+    font-size: x-large;
+    
+    label {
+      color: blue;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 100ms ease-in-out;
+      
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom-color: red;
+      }
+      
+      &.disabled {
+        color: purple;
+        cursor: default;
+        pointer-events: none;
+        border-bottom-color: blue;
+      }
+
+      button {
+        display: none;
+      }
+    }
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  cursor: text;
+  white-space: pre;
+}
+
+button {
+  &.standard {
+    font-size: large;
+
+    &:hover:enabled {
+      background: gray;
+      color: white;
+    }
+
+    &:active:enabled {
+      background: black;
+    }
+  }
+}
+
+div.title {
+  span {
+    color: green;
+  }
+
+  hr {
+    background: green;
+  }
+}
+
+div.subtitle-1 {
+  span {
+    color: darkorange;
+  }
+
+  hr {
+    background: darkorange;
+  }
+}
+
+div.subtitle-2 {
+  span {
+    color: gray;
+  }
+
+  hr {
+    background: gray;
+  }
+}

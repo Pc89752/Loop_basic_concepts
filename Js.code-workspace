@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"mocha.subdirectory": "..\\..\\..\\..\\..\\..\\c:\\Users\\91a04\\Desktop\\program\\Js\\Independent_study"
+	},
+	"extensions": {
+		"recommendations": [
+			"aaron-bond.better-comments",
+			"xabikos.javascriptsnippets",
+			"aalpgiray.javascript-development",
+			"diasbakahbay.html-coding",
+			"pkief.material-icon-theme",
+			"ritwickdey.liveserver",
+			"bmewburn.vscode-intelephense-client",
+			"ecmel.vscode-html-css",
+			"oderwat.indent-rainbow",
+			"pranaygp.vscode-css-peek",
+			"syler.sass-indented",
+			"ritwickdey.live-sass"
+		]
+	}
+}

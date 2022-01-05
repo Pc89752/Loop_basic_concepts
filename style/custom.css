@@ -1,0 +1,77 @@
+body {
+  background: wheat;
+}
+
+ul.navbar > li {
+  display: inline-block;
+  margin: 0 5%;
+  font-size: x-large;
+}
+
+ul.navbar > li label {
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+ul.navbar > li label:hover {
+  border-bottom-color: red;
+}
+
+ul.navbar > li label.disabled {
+  color: purple;
+  cursor: default;
+  pointer-events: none;
+  border-bottom-color: blue;
+}
+
+ul.navbar > li label button {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  cursor: text;
+  white-space: pre;
+}
+
+button.standard {
+  font-size: large;
+}
+
+button.standard:hover:enabled {
+  background: gray;
+  color: white;
+}
+
+button.standard:active:enabled {
+  background: black;
+}
+
+div.title span {
+  color: green;
+}
+
+div.title hr {
+  background: green;
+}
+
+div.subtitle-1 span {
+  color: darkorange;
+}
+
+div.subtitle-1 hr {
+  background: darkorange;
+}
+
+div.subtitle-2 span {
+  color: gray;
+}
+
+div.subtitle-2 hr {
+  background: gray;
+}
