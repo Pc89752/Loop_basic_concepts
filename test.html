@@ -19,7 +19,7 @@
                     <li><label>概要<button onclick="window.open('main.html', '_self')"></button></label></li><li>
                     <label>種類介紹<button onclick="window.open('types.html', '_self')"></button></label></li><li>
                     <label class="disabled">迴圈測試<button onclick="window.open('test.html', '_self')"></button></label></li><li>
-                    <label>continue和break<button onclick="window.open('test.html', '_self')"></button></label></li>
+                    <label>動態評量<button onclick="window.open('dynamic_assessment.html', '_self')"></button></label></li>
                 </ul>
                 <hr>
             </div>
@@ -28,9 +28,9 @@
                 
     <div class="container">
         <!-- ===== For迴圈介紹 開始 ===== -->
-        <div class="container" style="background: lightblue; border-radius: 1%;">
+        <div class="container card-1">
             <div class="subtitle-1">
-                <span>For迴圈</span>
+                <span>For迴圈介紹</span>
                 <hr>
             </div>
             <div class="container">
@@ -96,7 +96,7 @@ Hello World!Hello World!Hello World!Hello World!Hello World!
         <hr class="divider">
 
         <!-- ===== While迴圈介紹 開始 ===== -->
-        <div class="container" style="background: cyan; border-radius: 1%;">
+        <div class="container card-2">
             <div class="subtitle-1">
                 <span>While迴圈介紹</span>
                 <hr>
@@ -164,7 +164,7 @@ Hello World!Hello World!Hello World!Hello World!Hello World!
         <hr class="divider">
 
         <!-- ===== Do while迴圈介紹 開始 ===== -->
-        <div class="container" style="background: lightblue; border-radius: 1%;">
+        <div class="container card-1">
             <div class="subtitle-1">
                 <span>Do while迴圈介紹</span>
                 <hr>
@@ -230,6 +230,75 @@ Hello World!Hello World!Hello World!Hello World!Hello World!
             </div>
         </div>
         <!-- ===== Do while迴圈介紹 結束 ===== -->
+        <hr class="divider">
+
+        <!-- ===== Continue介紹 開始 ===== -->
+        <div class="container card-2">
+            <div class="subtitle-1">
+                <span>Continue介紹</span>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="subtitle-2">
+                    <span>概要</span>
+                    <hr>
+                </div>
+                <div class="container">
+                    <table style="width: 100%;">
+                        <td style="width: 50%; vertical-align: top;">
+                            <span>
+                                For迴圈的結構為:<br>
+                                for (新增或賦值變數; 可繼續執行的情況; 結束一次迴圈後的動作) {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;迴圈的執行內容<br>
+                                }
+                            </span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <span>範例:</span>
+                            <!-- 程式碼 開始 -->
+                            <textarea disabled rows="5">
+for (int i = 0; i &lt; 5; i++) {
+    printf("Hello World!");
+}
+                            </textarea>
+                            <!-- 程式碼 結束 -->
+                            <span>輸出:</span>
+                            <!-- 輸出 開始 -->
+                            <textarea disabled rows="5">
+Hello World!Hello World!Hello World!Hello World!Hello World!
+                            </textarea>
+                            <!-- 輸出 結束 -->
+                            </td>
+                    </table>
+                </div>
+                <div class="subtitle-2">
+                    <span>模擬</span>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="right">
+                        <span>輸出:</span>
+                        <!-- 輸出 開始 -->
+                        <textarea id="textarea_for" disabled style="height: 100px;"></textarea>
+                        <!-- 輸出 結束 -->
+                    </div>
+
+                    <button class="standard" onclick="simulation_for();">開始</button>
+                    <button class="standard" onclick="toLoop[0] = true;" style="margin-left: 1ch;">下一步</button>
+                    <button class="standard" onclick="toLoop[0] = null;" style="margin-left: 1ch;">停止</button>
+                    <button class="standard" onclick="clear_for();" style="margin-left: 1ch;">清除</button><br><br>
+                    <span>for&nbsp;(int&nbsp;i&nbsp;=&nbsp;</span>
+                    <input id="init_value_for" type="text" size="1">
+                    <span>;&nbsp;i&nbsp;&lt;&nbsp;</span>
+                    <input id="smaller_than_for" type="text" size="1">
+                    <span>;&nbsp;i++)&nbsp;{<br>&emsp;printf("</span>
+                    <input id="output_str_for" type="text">
+                    <span>");<br>}</span>
+                </div>
+            </div>
+        </div>
+        <!-- ===== For迴圈介紹 結束 ===== -->
+        <hr class="divider">
         
     </div>
 
