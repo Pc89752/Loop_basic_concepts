@@ -1,4 +1,4 @@
-div.container {
+div.container, div.card-1, div.card-2 {
   margin-left: 2%;
   margin-right: 2%;
   padding: 1%;
@@ -119,6 +119,28 @@ html, body {
   min-height: -moz-max-content;
   min-height: max-content;
   background-size: contain;
+}
+
+ul.navbar > li {
+  display: inline-block;
+  margin: 0 5%;
+}
+
+ul.navbar > li label {
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+ul.navbar > li label.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+ul.navbar > li label button {
+  display: none;
 }
 
 input[type="text"] {

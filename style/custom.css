@@ -2,19 +2,55 @@ body {
   background: wheat;
 }
 
-ul.navbar > li {
+#problem > span {
+  font-size: x-large;
+}
+
+#problem > div {
+  width: 100%;
+  text-align: center;
+}
+
+#problem > div > label {
   display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
   margin: 0 5%;
+  padding: 2% 0;
+  border: 5px solid orange;
+  background-color: white;
+  border-radius: 25px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+#problem > div > label:hover {
+  background-color: white;
+  border-color: green;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#problem input {
+  display: none;
+}
+
+#problem input:checked + label {
+  background-color: green;
+  border-color: white;
+  color: white;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+ul.navbar > li {
   font-size: x-large;
 }
 
 ul.navbar > li label {
   color: blue;
-  cursor: pointer;
-  font-weight: bold;
-  -webkit-transition: all 100ms ease-in-out;
-  transition: all 100ms ease-in-out;
-  border-bottom: 2px solid transparent;
 }
 
 ul.navbar > li label:hover {
@@ -23,13 +59,7 @@ ul.navbar > li label:hover {
 
 ul.navbar > li label.disabled {
   color: purple;
-  cursor: default;
-  pointer-events: none;
   border-bottom-color: blue;
-}
-
-ul.navbar > li label button {
-  display: none;
 }
 
 textarea {

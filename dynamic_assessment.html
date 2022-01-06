@@ -1,5 +1,5 @@
-<!-- 2021/1/5 -->
-<!-- 蘇子峻 -->
+<!-- update time: 2021/1/5 -->
+<!-- author: Jim -->
 
 <html>
 
@@ -8,10 +8,10 @@
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/general.css">
     <link rel="stylesheet" href="style/custom.css">
+    <script src="js/prepareQuiz.js"></script>
 </head>
 
 <body>
-
     <div class="header">
         <div class="container">
             <div class="title" style="text-align: center;">
@@ -19,15 +19,34 @@
                 <ul class="navbar">
                     <li><label>概要<button onclick="window.open('main.html', '_self')"></button></label></li><li>
                     <label>種類介紹<button onclick="window.open('types.html', '_self')"></button></label></li><li>
-                    <label>迴圈測試<button onclick="window.open('test.html', '_self')"></button></label></li><li>
+                    <label>迴圈模擬<button onclick="window.open('simulation.html', '_self')"></button></label></li><li>
                     <label class="disabled">動態評量<button onclick="window.open('dynamic_assessment.html', '_self')"></button></label></li>
                 </ul>
                 <hr>
             </div>
         </div>
+        
     </div>
-
+    
     <div class="container">
+        <div id="problem" class="card-2">
+            <span>無題目載入</span><br>
+            <div class="container">
+                <input type="radio" name="options" id="opt_1">
+                <label for="opt_1">無選項載入</label>
+                <input type="radio" name="options" id="opt_2">
+                <label for="opt_2">無選項載入</label><br><br>
+                <input type="radio" name="options" id="opt_3">
+                <label for="opt_3">無選項載入</label>
+                <input type="radio" name="options" id="opt_4">
+                <label for="opt_4">無選項載入</label>
+            </div>
+        </div>
+        <!-- Onload for div#problem -->
+        <script>
+            sortProblems();
+            loadProblem();
+        </script>
     </div>
 
     <div class="container footer">

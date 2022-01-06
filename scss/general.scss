@@ -9,6 +9,29 @@ html, body {
     background-size: contain;
 }
 
+ul.navbar > li {
+    display: inline-block;
+    margin: 0 5%;
+    
+    label {
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 100ms ease-in-out;
+        
+        border-bottom: 2px solid transparent;
+        
+        &.disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+
 input[type="text"] {
     border-width: 1px;
     border-top-left-radius: 4px;
