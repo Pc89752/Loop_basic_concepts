@@ -9,6 +9,29 @@ html, body {
     background-size: contain;
 }
 
+input[type="text"] {
+    border-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: rgb(100, 100, 100);
+    
+    &:hover {
+        background-color: rgb(150, 150, 150);
+    }
+}
+
 img {
     max-height: 100%;
     max-width: 100%;

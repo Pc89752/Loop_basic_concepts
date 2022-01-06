@@ -1,3 +1,6 @@
+<!-- 2021/1/5 -->
+<!-- 蘇子峻 -->
+
 <html>
 
 <head>
@@ -247,17 +250,17 @@ Hello World!Hello World!Hello World!Hello World!Hello World!
                     <table style="width: 100%;">
                         <td style="width: 50%; vertical-align: top;">
                             <span>
-                                For迴圈的結構為:<br>
-                                for (新增或賦值變數; 可繼續執行的情況; 結束一次迴圈後的動作) {<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;迴圈的執行內容<br>
-                                }
+                                continue的功能為跳過後面，直接執行下一次迴圈。
                             </span>
                         </td>
                         <td style="vertical-align: top;">
                             <span>範例:</span>
                             <!-- 程式碼 開始 -->
-                            <textarea disabled rows="5">
+                            <textarea disabled rows="7">
 for (int i = 0; i &lt; 5; i++) {
+    if (i &lt; 2) {
+        continue;
+    }
     printf("Hello World!");
 }
                             </textarea>
@@ -265,7 +268,7 @@ for (int i = 0; i &lt; 5; i++) {
                             <span>輸出:</span>
                             <!-- 輸出 開始 -->
                             <textarea disabled rows="5">
-Hello World!Hello World!Hello World!Hello World!Hello World!
+Hello World!Hello World!Hello World!
                             </textarea>
                             <!-- 輸出 結束 -->
                             </td>
@@ -279,26 +282,103 @@ Hello World!Hello World!Hello World!Hello World!Hello World!
                     <div class="right">
                         <span>輸出:</span>
                         <!-- 輸出 開始 -->
-                        <textarea id="textarea_for" disabled style="height: 100px;"></textarea>
+                        <textarea id="textarea_continue" disabled style="height: 100px;"></textarea>
                         <!-- 輸出 結束 -->
                     </div>
 
-                    <button class="standard" onclick="simulation_for();">開始</button>
+                    <button class="standard" onclick="simulation_continue();">開始</button>
                     <button class="standard" onclick="toLoop[0] = true;" style="margin-left: 1ch;">下一步</button>
                     <button class="standard" onclick="toLoop[0] = null;" style="margin-left: 1ch;">停止</button>
-                    <button class="standard" onclick="clear_for();" style="margin-left: 1ch;">清除</button><br><br>
+                    <button class="standard" onclick="clear_continue();" style="margin-left: 1ch;">清除</button><br><br>
                     <span>for&nbsp;(int&nbsp;i&nbsp;=&nbsp;</span>
-                    <input id="init_value_for" type="text" size="1">
+                    <input id="init_value_continue" type="text" size="1">
                     <span>;&nbsp;i&nbsp;&lt;&nbsp;</span>
-                    <input id="smaller_than_for" type="text" size="1">
-                    <span>;&nbsp;i++)&nbsp;{<br>&emsp;printf("</span>
-                    <input id="output_str_for" type="text">
-                    <span>");<br>}</span>
+                    <input id="smaller_than_continue" type="text" size="1">
+                    <span>;&nbsp;i++)&nbsp;{<br></span>
+                    <span>&emsp;if&nbsp;(i&nbsp;&lt;<input id="smaller_than_continue_2" type="text" size="1">)&nbsp;{</span><br>
+                    <span>&emsp;&emsp;continue;</span><br>
+                    <span>&emsp;}</span><br>
+                    <span>&emsp;printf("</span>
+                    <input id="output_str_continue" type="text">
+                    <span>");</span><br>
+                    <span>}</span>
                 </div>
             </div>
         </div>
-        <!-- ===== For迴圈介紹 結束 ===== -->
+        <!-- ===== Continue介紹 結束 ===== -->
         <hr class="divider">
+        
+        <!-- ===== Break介紹 開始 ===== -->
+        <div class="container card-1">
+            <div class="subtitle-1">
+                <span>Break介紹</span>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="subtitle-2">
+                    <span>概要</span>
+                    <hr>
+                </div>
+                <div class="container">
+                    <table style="width: 100%;">
+                        <td style="width: 50%; vertical-align: top;">
+                            <span>
+                                break的功能為直接跳出迴圈。
+                            </span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <span>範例:</span>
+                            <!-- 程式碼 開始 -->
+                            <textarea disabled rows="7">
+for (int i = 0; i &lt; 5; i++) {
+    if (i &gt; 2) {
+        break;
+    }
+    printf("Hello World!");
+}
+                            </textarea>
+                            <!-- 程式碼 結束 -->
+                            <span>輸出:</span>
+                            <!-- 輸出 開始 -->
+                            <textarea disabled rows="5">
+Hello World!Hello World!
+                            </textarea>
+                            <!-- 輸出 結束 -->
+                            </td>
+                    </table>
+                </div>
+                <div class="subtitle-2">
+                    <span>模擬</span>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="right">
+                        <span>輸出:</span>
+                        <!-- 輸出 開始 -->
+                        <textarea id="textarea_break" disabled style="height: 100px;"></textarea>
+                        <!-- 輸出 結束 -->
+                    </div>
+
+                    <button class="standard" onclick="simulation_break();">開始</button>
+                    <button class="standard" onclick="toLoop[0] = true;" style="margin-left: 1ch;">下一步</button>
+                    <button class="standard" onclick="toLoop[0] = null;" style="margin-left: 1ch;">停止</button>
+                    <button class="standard" onclick="clear_break();" style="margin-left: 1ch;">清除</button><br><br>
+                    <span>for&nbsp;(int&nbsp;i&nbsp;=&nbsp;</span>
+                    <input id="init_value_break" type="text" size="1">
+                    <span>;&nbsp;i&nbsp;&lt;&nbsp;</span>
+                    <input id="smaller_than_break" type="text" size="1">
+                    <span>;&nbsp;i++)&nbsp;{<br></span>
+                    <span>&emsp;if&nbsp;(i&nbsp;&gt;<input id="greater_than_break" type="text" size="1">)&nbsp;{</span><br>
+                    <span>&emsp;&emsp;break;</span><br>
+                    <span>&emsp;}</span><br>
+                    <span>&emsp;printf("</span>
+                    <input id="output_str_break" type="text">
+                    <span>");</span><br>
+                    <span>}</span>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Break介紹 結束 ===== -->
         
     </div>
 
