@@ -1,10 +1,13 @@
+// update-time: 2022/1/10
+// Authour: Jim
+
 var toLoop = [null, null, null, null, null];
 
 // For loop
 async function simulation_for() {
     // Check if the last loop is completed
     // If isn't, then stop it and current function
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         toLoop[0] = null;
         alert("上次的迴圈未結束，已停止該迴圈");
         return;
@@ -37,7 +40,7 @@ async function simulation_for() {
     toLoop[0] = null;
 }
 function clear_for() {
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         alert("目前迴圈尚未完全執行!");
         return;
     }
@@ -155,7 +158,7 @@ function clear_do_while() {
 async function simulation_continue() {
     // Check if the last loop is completed
     // If isn't, then stop it and current function
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         toLoop[0] = null;
         alert("上次的迴圈未結束，已停止該迴圈");
         return;
@@ -191,7 +194,7 @@ async function simulation_continue() {
     toLoop[0] = null;
 }
 function clear_continue() {
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         alert("目前迴圈尚未完全執行!");
         return;
     }
@@ -206,7 +209,7 @@ function clear_continue() {
 async function simulation_break() {
     // Check if the last loop is completed
     // If isn't, then stop it and current function
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         toLoop[0] = null;
         alert("上次的迴圈未結束，已停止該迴圈");
         return;
@@ -242,7 +245,7 @@ async function simulation_break() {
     toLoop[0] = null;
 }
 function clear_break() {
-    if (toLoop[0] !== null) {
+    if (toLoop[0] === false) {
         alert("目前迴圈尚未完全執行!");
         return;
     }

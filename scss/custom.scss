@@ -1,17 +1,22 @@
+// update-time: 2022/1/10
+// Authour: Jim
+
 body {
   background: wheat;
 }
 
 #problem {
-  span {
+  >span {
+    max-width: 100%;
     font-size: x-large;
+    word-wrap:break-word;
   }
 
-  &>div {
+  >div {
     width: 100%;
     text-align: center;
 
-    &>label {
+    >label {
       display: inline-block;
       align-items: center;
       width: 30%;
@@ -63,7 +68,7 @@ ul.navbar > li {
 textarea {
   width: 100%;
   resize: none;
-  cursor: text;
+  cursor: auto;
   white-space: pre;
 }
 

@@ -1,6 +1,5 @@
 div.container, div.card-1, div.card-2 {
-  margin-left: 2%;
-  margin-right: 2%;
+  margin: auto;
   padding: 1%;
   width: 94%;
   height: -webkit-max-content;
@@ -119,6 +118,7 @@ html, body {
   min-height: -moz-max-content;
   min-height: max-content;
   background-size: contain;
+  scroll-behavior: smooth;
 }
 
 ul.navbar > li {
@@ -153,6 +153,7 @@ input[type="text"] {
 
 ::-webkit-scrollbar {
   width: 18px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {

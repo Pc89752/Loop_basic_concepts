@@ -3,7 +3,9 @@ body {
 }
 
 #problem > span {
+  max-width: 100%;
   font-size: x-large;
+  word-wrap: break-word;
 }
 
 #problem > div {
@@ -65,7 +67,7 @@ ul.navbar > li label.disabled {
 textarea {
   width: 100%;
   resize: none;
-  cursor: text;
+  cursor: auto;
   white-space: pre;
 }
 
